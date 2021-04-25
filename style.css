@@ -32,21 +32,44 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #888;
 }
+/* img {
+  margin: 0px;
+  z-index: -1;
+  position: relative;
+  height: 900px;
+  min-width: 1080px;
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  overflow: hidden; */
 
+/* top: 0;
+  left: 0;
+} */
 body {
-  background-image: url("img.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  background-position: center center;
-  min-height: 100%;
+  position: relative;
   /* background-image: linear-gradient(120deg, black, #fda085); */
   color: floralwhite;
   min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-image: url("img.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
 }
 header {
+  position: relative;
   padding-top: 2rem;
   font-family: "Sedgwick Ave Display";
   font-size: 1.7rem;
@@ -171,9 +194,6 @@ form button:focus {
 }
 
 @media screen and (max-width: 780px) {
-  body {
-    background-size: 350% 100%;
-  }
   header {
     font-size: 1.8rem;
   }
@@ -194,7 +214,10 @@ form button:focus {
 }
 @media screen and (max-width: 380px) {
   body {
-    background-size: 415% 100%;
+    /* background-image: linear-gradient(120deg, black, #b3a49f); */
+    background-image: url("img.jpg");
+
+    /* background-size: 415% 100%; */
   }
   header {
     font-size: 1.4rem;
