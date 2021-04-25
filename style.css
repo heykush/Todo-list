@@ -83,7 +83,6 @@ form button {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 form button:focus {
   outline: none;
 }
@@ -162,13 +161,21 @@ form button:focus {
 
 @media screen and (max-width: 780px) {
   header {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
   form input {
     width: 90%;
+    font-size: 1.8rem;
   }
   .todo-list {
     min-width: 81%;
+  }
+  .todo {
+    font-size: 1.5rem;
+  }
+  form button {
+    font-size: 1.8rem;
+    margin-left: -50px;
   }
 }
 @media screen and (max-width: 380px) {
@@ -176,10 +183,18 @@ form button:focus {
     font-size: 1.4rem;
   }
   form input {
-    width: 90%;
+    width: 100%;
+    font-size: 1.8rem;
   }
   .todo-list {
     min-width: 81%;
   }
-}
+  .todo {
+    font-size: 1.3rem;
+  }
+  form button {
+    font-size: 1.8rem;
+    margin-left: -50px;
 
+  }
+}
