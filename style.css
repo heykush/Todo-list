@@ -195,7 +195,7 @@ form button:focus {
 
 @media screen and (max-width: 780px) {
   header {
-    font-size: 1.8rem;
+    font-size: 2.24rem;
   }
   form input {
     width: 97%;
@@ -220,7 +220,7 @@ form button:focus {
     /* background-size: 415% 100%; */
   }
   header {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
   form input {
     width: 100%;
