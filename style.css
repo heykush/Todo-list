@@ -5,7 +5,6 @@
 }
 ::-webkit-scrollbar {
   width: 8px;
-  overflow-y: scroll;
   display: block;
 }
 
@@ -21,12 +20,12 @@
 }
 .wrapper::-webkit-scrollbar-track-piece:end {
   background: transparent;
-  margin-bottom: 10px;
+
 }
 
 .wrapper::-webkit-scrollbar-track-piece:start {
   background: transparent;
-  margin-top: 10px;
+
 }
 
 ::-webkit-scrollbar-thumb:hover {
