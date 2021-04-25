@@ -84,6 +84,10 @@ form button {
   transition: all 0.3s ease;
 }
 
+form button:focus {
+  outline: none;
+}
+
 .todo-container {
   margin-top: 1.5rem;
   display: flex;
