@@ -39,11 +39,10 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
   /* background-image: linear-gradient(120deg, black, #fda085); */
-  /* background: url("img.jpg"); */
   color: floralwhite;
   min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  /* font-family: "Sedgwick Ave Display", cursive; */
+
 }
 header {
   padding-top: 2rem;
@@ -74,15 +73,14 @@ form input {
   background: white;
   border-radius: 50px;
   animation-name: blink;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 3px 0 rgb(41 43 41 / 86%), 0 0 0 0px rgb(248 248 248/95%);
 }
 
 .input:hover,
 input:focus {
   outline: none;
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 3px 0 rgb(41 43 41 / 86%), 0 0 0 0px rgb(248 248 248/95%);
 }
-
 form button {
   padding: 0.5rem;
   font-size: 2.4rem;
