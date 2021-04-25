@@ -20,11 +20,13 @@
 }
 .wrapper::-webkit-scrollbar-track-piece:end {
   background: transparent;
+  margin-bottom: 10px;
 
 }
 
 .wrapper::-webkit-scrollbar-track-piece:start {
   background: transparent;
+  margin-top: 10px;
 
 }
 
@@ -51,8 +53,8 @@ body::before {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 header {
   position: relative;
