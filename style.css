@@ -163,6 +163,9 @@ form button {
   form input {
     width: 90%;
   }
+  .todo-list {
+    min-width: 81%;
+  }
 }
 @media screen and (max-width: 380px) {
   header {
@@ -171,4 +174,8 @@ form button {
   form input {
     width: 90%;
   }
+  .todo-list {
+    min-width: 81%;
+  }
 }
+
