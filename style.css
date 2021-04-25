@@ -199,12 +199,6 @@ form button:focus {
   }
 }
 @media screen and (max-width: 380px) {
-  body {
-    /* background-image: linear-gradient(120deg, black, #b3a49f); */
-    background-image: url("img.jpg");
-
-    /* background-size: 415% 100%; */
-  }
   header {
     font-size: 1.7rem;
   }
