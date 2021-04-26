@@ -3,9 +3,9 @@ const todoButton = document.querySelector(".todo-btn");
 const todoList = document.querySelector(".todo-list");
 
 document.addEventListener("DOMContentLoaded", getTodos);
-if (todoButton) {
+
 todoButton.addEventListener("click", addTodo);
-}
+
 if (todoList) {
   todoList.addEventListener("click", delectCheck);
 }
@@ -20,16 +20,17 @@ function addTodo(event) {
   newtodo.innerText = todoInput.value;
   if (todoInput.value.length === 0) {
     removeLocalTodos(todo);
+  } 
+
+  console.log(JSON.parse(window.localStorage.getItem("items")));
+  var array = JSON.parse(window.localStorage.getItem("items")) || [];
+  if(array.indexOf(todoInput.value) == -1){
+    array.push(todoInput.value);
+    window.localStorage.setItem("items", JSON.stringify(array));
   }
-
-//   let d = todoInput.value;
-//   let b = JSON.parse(localStorage.getItem("todos"));
-//   if (b.includes(d)) {
-//     console.log("it exist");
-//     let dup = [...new Set(b)];
-//     removeLocalTodos(dup);
-//   }
-
+    else{
+      removeLocalTodos(todo);
+    }
   newtodo.classList.add("todo-item");
   todoDiv.appendChild(newtodo);
 
@@ -48,6 +49,7 @@ function addTodo(event) {
   todoList.appendChild(todoDiv);
 
   todoInput.value = "";
+  
 }
 
 function delectCheck(e) {
@@ -110,6 +112,12 @@ function getTodos() {
   });
 }
 
+let d = todoInput.value;
+let b = JSON.parse(localStorage.getItem("todos"));
+if (b.includes(d)) {
+  let dup = [...new Set(b)];
+  removeLocalTodos(dup);
+}
 function removeLocalTodos(todo) {
   let todos;
   if (localStorage.getItem("todos") === null) {
