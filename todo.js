@@ -22,7 +22,7 @@ function addTodo(event) {
     removeLocalTodos(todo);
   } 
 
-  console.log(JSON.parse(window.localStorage.getItem("items")));
+//   console.log(JSON.parse(window.localStorage.getItem("items")));
   var array = JSON.parse(window.localStorage.getItem("items")) || [];
   if(array.indexOf(todoInput.value) == -1){
     array.push(todoInput.value);
