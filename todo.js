@@ -3,9 +3,9 @@ const todoButton = document.querySelector(".todo-btn");
 const todoList = document.querySelector(".todo-list");
 
 document.addEventListener("DOMContentLoaded", getTodos);
-
+if (todoButton) {
 todoButton.addEventListener("click", addTodo);
-
+}
 if (todoList) {
   todoList.addEventListener("click", delectCheck);
 }
@@ -22,13 +22,13 @@ function addTodo(event) {
     removeLocalTodos(todo);
   }
 
-  let d = todoInput.value;
-  let b = JSON.parse(localStorage.getItem("todos"));
-  if (b.includes(d)) {
-    console.log("it exist");
-    let dup = [...new Set(b)];
-    removeLocalTodos(dup);
-  }
+//   let d = todoInput.value;
+//   let b = JSON.parse(localStorage.getItem("todos"));
+//   if (b.includes(d)) {
+//     console.log("it exist");
+//     let dup = [...new Set(b)];
+//     removeLocalTodos(dup);
+//   }
 
   newtodo.classList.add("todo-item");
   todoDiv.appendChild(newtodo);
